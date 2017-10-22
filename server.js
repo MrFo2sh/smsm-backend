@@ -44,7 +44,7 @@ app.get('/updatestatus',function(req, res){
     console.log(open,customers);
     res.json({open: open});
 });
-
-app.listen(3000,function(){
+var port = process.env.PORT || 3000;
+app.listen(port,function(){
     console.log("app started");
 });
